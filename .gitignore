@@ -1,0 +1,3 @@
+*.json
+!CourseId.json
+!FacultyId.json
