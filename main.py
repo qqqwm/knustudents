@@ -51,7 +51,7 @@ for id1 in facultyKeys:
 			totalNumberGroups += 1
 
 print(totalNumberGroups)
-fp = open('knuStudents.json', 'w', encoding = 'utf8')
+fp = open('KnuStudents.json', 'w', encoding = 'utf8')
 json.dump(knuStudents, fp, ensure_ascii = False, indent = 4)
 fp.close()
 
