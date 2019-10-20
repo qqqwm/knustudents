@@ -3,12 +3,12 @@ import json
 
 groupsByFacultyAndCourse = 'https://student.triton.univ.kiev.ua/Registration/GroupsByFacultyAndCourse'
 studentsByGroup = 'https://student.triton.univ.kiev.ua/Registration/StudentsByGroup'
-
+enc = 'utf8'
 #read data about faculties and groups
-fp = open('FacultyId.json','r', encoding = 'utf8')
+fp = open('FacultyId.json','r', encoding = enc)
 facultyId = json.load(fp)
 fp.close()
-fp = open('CourseId.json','r', encoding = 'utf8')
+fp = open('CourseId.json','r', encoding = enc)
 courseId = json.load(fp)
 fp.close()
 
@@ -51,10 +51,10 @@ for id1 in facultyKeys:
 			totalNumberGroups += 1
 
 print(totalNumberGroups)
-fp = open('KnuStudents.json', 'w', encoding = 'utf8')
+fp = open('KnuStudents.json', 'w', encoding = enc)
 json.dump(knuStudents, fp, ensure_ascii = False, indent = 4)
 fp.close()
 
-fp = open('exceptionList.txt', 'w', encoding = 'utf8')
+fp = open('exceptionList.txt', 'w', encoding = enc)
 fp.write(str(exceptionList))
 fp.close()

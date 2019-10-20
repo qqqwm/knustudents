@@ -1,6 +1,6 @@
 import json
-
-fp = open('KnuStudents_short.json','r', encoding = 'utf8')
+enc = 'utf8'
+fp = open('KnuStudents_short.json','r', encoding = enc)
 knu = json.load(fp)
 fp.close()
 names = {}
